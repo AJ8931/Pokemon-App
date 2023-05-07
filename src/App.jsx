@@ -1,10 +1,14 @@
 import './App.css'
+import Home from './Components/Home'
+import Theme from './Theme'
 
 function App() {
 
   return (
     <>
-      <div>Hello World</div>
+      <Theme>
+        <Home />
+      </Theme>
     </>
   )
 }
