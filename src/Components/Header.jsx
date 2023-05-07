@@ -3,6 +3,7 @@ import Burger from './burger'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faHome } from '@fortawesome/free-solid-svg-icons'
 import './navbar.css'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
     const [Toggle, setToggle] = useState()
@@ -32,15 +33,15 @@ const NavBar = () => {
                     </div>
                     <ul className='flex flex-row justify-end w-3/6 items-center text-lg max-[1708px]:text-sm gap-[25px] min-w-[510px] font-medium lg:gap-[40px] lg:font-semibold lg:min-w-[605px] text-grey'>
                         <li className='cursor-pointer font-bold text-lg text-yellow-300 link link-underline link-underline-black pb-2 hover:text-green active' >
-                            <a href="#hero">
+                            <Link to="/">
                                 Home
-                            </a>
+                            </Link>
                             <FontAwesomeIcon icon={faHome} size="sm" className='mx-2 text-grey' />
                         </li>
                         <li className='cursor-pointer font-bold text-lg text-yellow-300 link link-underline link-underline-black pb-2 hover:text-green' >
-                            <a href="#about">
+                            <Link to="/Search">
                                 Search
-                            </a>
+                            </Link>
                             <FontAwesomeIcon icon={faSearch} size="sm" className='mx-2 text-grey' />
                         </li>
                     </ul>
